@@ -42,17 +42,15 @@ index.py: building an inverted index for the database
 
 query.py: calling the search engine. 
 
-Modules: 
 
-class Movie(): Define document mapping (schema) by defining a class as a subclass of Document. 
+Tokenization:
 
-test_analyzer(): For testing analyzer
+Elasticsearch standard tokenizer for text search, and whitespace tokenizer for others.
 
-buildIndex(): buildIndex creates a new film index, deleting any existing index of the same name. It loads a json file containing the movie corpus and does bulk loading using a generator function. 
+Text Normalization: 
 
-results(): show result pages
+Porter stemmer, lowercase, asciifolding for text. Lowercase for others.
 
-documents(): display a particular document given a result number
 
 Testing: 
 
@@ -64,16 +62,3 @@ Abrahaminte Santhathikal, score: 9.678776
 
 My Brother's Name Is Robert and He Is an Idiot, score: 8.974666
 
-Tokenization:
-
-Elasticsearch standard tokenizer for text search, and whitespace tokenizer for others.
-
-Text Normalization: 
-
-Porter stemmer, lowercase, asciifolding for text. Lowercase for others.
-
-Test Queries Examples:
-
-Data: two corpus files (test_corpus.json, 2018_movies.json).
-
-Time: indexing time less than a second 
